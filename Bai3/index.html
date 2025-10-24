@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- Thiết lập bảng mã ký tự và kích thước viewport cho giao diện responsive -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Cửa hàng Sách ABC</title>
+</head>
+<body>
+    <header>
+        <h1>Cửa hàng Sách ABC</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Giới thiệu -->
+        <section id="gioi-thieu">
+            <h2>Giới thiệu</h2>
+            <p>
+                Chào mừng bạn đến với <strong>Cửa hàng Sách ABC</strong> –
+                nơi bạn có thể tìm thấy những cuốn sách hay và truyền cảm hứng mỗi ngày.
+            </p>
+        </section>
+
+        <!-- Công cụ: Tìm kiếm + Thêm sản phẩm -->
+        <section id="tools">
+            <h2 style="display:none">Công cụ</h2>
+            <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+            <button id="searchBtn" type="button">Tìm</button>
+            <button id="addProductBtn" type="button">Thêm sản phẩm</button>
+        </section>
+
+        <!-- Danh sách sản phẩm -->
+        <section id="san-pham">
+            <h2>Sản phẩm nổi bật</h2>
+
+            <article class="product-item">
+                <h3 class="product-name">Tư Duy Nhanh Và Chậm</h3>
+                <img src="https://sachngoaingugiare.com/wp-content/uploads/2021/06/tu-duy-nhanh-va-cham-2.jpg"
+                     alt="Sách Tư Duy Nhanh Và Chậm">
+                <p>Cuốn sách kinh điển về cách con người suy nghĩ và ra quyết định trong cuộc sống.</p>
+                <p>Giá: 189.000₫</p>
+            </article>
+
+            <article class="product-item">
+                <h3 class="product-name">Atomic Habits</h3>
+                <img src="https://m.media-amazon.com/images/I/61M6KzUbf7L._AC_UF350,350_QL80_.jpg"
+                     alt="Sách Atomic Habits">
+                <p>Giúp bạn xây dựng thói quen tốt, phá vỡ thói quen xấu và phát triển bản thân từng ngày.</p>
+                <p>Giá: 165.000₫</p>
+            </article>
+
+            <article class="product-item">
+                <h3 class="product-name">Đắc Nhân Tâm</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNB6eShdDAsu2YM5mkwqEkFgnIlD2nhomAVQ&s"
+                     alt="Sách Đắc Nhân Tâm">
+                <p>Tác phẩm giúp bạn hoàn thiện kỹ năng giao tiếp và ứng xử trong công việc và cuộc sống.</p>
+                <p>Giá: 120.000₫</p>
+            </article>
+        </section>
+
+        <!-- Form thêm sản phẩm (ẩn mặc định, JS sẽ toggle) -->
+        <section id="them-san-pham">
+            <h2>Thêm sản phẩm</h2>
+            <form id="addProductForm" class="hidden">
+                <label for="pname">Tên sản phẩm *</label>
+                <input id="pname" name="pname" type="text" required>
+
+                <label for="pimg">Ảnh (URL)</label>
+                <input id="pimg" name="pimg" type="url" placeholder="https://...">
+
+                <label for="pdesc">Mô tả</label>
+                <textarea id="pdesc" name="pdesc" rows="3"></textarea>
+
+                <label for="pprice">Giá *</label>
+                <input id="pprice" name="pprice" type="text" placeholder="vd: 149.000₫" required>
+
+                <button type="submit">Thêm vào danh sách</button>
+            </form>
+        </section>
+
+        <!-- Form liên hệ/đăng ký nhận tin -->
+        <section id="lien-he">
+            <h2>Đăng ký nhận tin</h2>
+            <form>
+                <label for="name">Họ và tên:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Nội dung:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit">Gửi</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cửa hàng Sách ABC. All rights reserved.</p>
+        <p>Địa chỉ: 123 Phố Sách, Hà Nội | Điện thoại: 0123 456 789</p>
+    </footer>
+
+    <!-- Nhúng JS ở cuối thân trang -->
+    <script src="script.js"></script>
+</body>
+</html>
